@@ -18,14 +18,14 @@
       <div class="form-container">
         <%= simple_form_for([@post, Comment.new]) do |f| %>
           <%= f.input :content, label: "Live your comment here", as: :text, input_html: { id: "comment_content" }, label_html: { id: "comment_content"} %>
-          <%= f.submit "Post", class: "btn-comments btn btn-primary" %>
+          <%= f.submit "Post", class: "btn-comments btn btn-danger" %>
         <% end %>
 
         <% if flash[:success].present? %>
           <div class="alert alert-success">
             <%= flash[:success] %>
           </div>
-        <% else %>
+        <% elsif flash[:error] %>
           <div class="alert alert-danger">
             <%= flash[:error] %>
           </div>
