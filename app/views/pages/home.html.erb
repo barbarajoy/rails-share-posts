@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0aWNsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);">
+  <div class="container">
+    <h1>Stay curious!</h1>
+    <p>Discover stories, thinking, and expertise from writers on any topic.</p>
+    <%= link_to "All articles", posts_path, class: "btn btn-warning btn-home" %>
+  </div>
+</div>

@@ -1,1 +1,19 @@
-<h1>All Posts</h1>
+      <div class="col-10 mx-auto">
+        <div class="card-post-grid">
+          <% @posts.each do |post| %>
+              <div class="card-post">
+                <%= image_tag post.url %>
+                <div class="card-post-infos">
+                  <div>
+                    <h2><%= link_to post.title, post_path(post) %></h2>
+                  </div>
+                  <div>
+                    <p class="mx-auto"><%= post.user.nickname %></p>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

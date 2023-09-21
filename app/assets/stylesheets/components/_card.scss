@@ -1,0 +1,97 @@
+.container-fluid {
+  //   display: flex;
+    padding: 0;
+  }
+
+  .card-post-grid {
+    margin: 24px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+  }
+
+  .card-post {
+    flex-grow: 1;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    // max-width: 400px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-post > img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-post h2 {
+    display: flex;
+    height: 85px;
+    align-items: center;
+    overflow: hidden;
+    min-width: 70px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 12px 8px 0px;
+    padding: 5px;
+  }
+
+  .card-post h3 {
+    font-weight: bold;
+  }
+
+  .card-post p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  }
+
+  .card-post-infos {
+    height: 100px;
+    p {
+      overflow: hidden;
+    }
+  }
+
+  .card-post .card-post-infos {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .card-post-infos .card-post-user {
+    position: absolute;
+    right: 3%;
+    top: -40px;
+    width: 60px;
+  }
+
+  .card-posttrip-infos .card-planner {
+    font-weight: bold;
+    color: $green;
+  }
+
+
+  .card-post-infos .card-tags {
+    display: inline-block;
+  }
+
+  .card-post a {
+    text-decoration: none;
+    color: $very-dark-green;
+    transition: 0.3s;
+
+    hover {
+      color: $green;
+    }
+
+  }
+
+  .card-post p {
+    font-family: 'Roboto', sans-serif;
+  }
