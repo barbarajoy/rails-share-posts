@@ -15,12 +15,24 @@
           <% end %>
         </ul>
       </div>
-      <div class="form-container>
+      <div class="form-container">
         <%= simple_form_for([@post, Comment.new]) do |f| %>
           <%= f.input :content, label: "Live your comment here", as: :text, input_html: { id: "comment_content" }, label_html: { id: "comment_content"} %>
           <%= f.submit "Post", class: "btn-comments btn btn-primary" %>
         <% end %>
+
+        <% if flash[:success].present? %>
+          <div class="alert alert-success">
+            <%= flash[:success] %>
+          </div>
+        <% else %>
+          <div class="alert alert-danger">
+            <%= flash[:error] %>
+          </div>
+        <% end %>
       </div>
+
+    <div>
       <p class="my-4"><i class="fa-solid fa-arrow-rotate-left" style="color: #0d0d0d;"></i>
       <%= link_to "Return to all articles", posts_path %></p>
     </div>

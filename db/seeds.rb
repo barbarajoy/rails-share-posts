@@ -10,6 +10,7 @@ User.create!(email: "janis@mail.com", password: "test123", nickname: "janisjopli
 User.create!(email: "jim@mail.com", password: "test123", nickname: "jimmorrison")
 User.create!(email: "jimmy@mail.com", password: "test123", nickname: "jimmypage")
 User.create!(email: "george@mail.com", password: "test123", nickname: "georgeharrison")
+User.create!(email: "david@mail.com", password: "test123", nickname: "davidbowie")
 
 users = User.all.to_a
 random_user = users.sample
@@ -50,12 +51,33 @@ Post.create!(
   url: "https://medium.com/dev-genius/vscode-tips-tricks-98c6e2258626"
 )
 
+Post.create!(
+  title: "Advice From a Software Engineer With 8 Years of Experience",
+  content: "Hello, and welcome!
+  My name is Benoit. I have been a software engineer for the past eight and a half years. I stayed at my previous (and first) company for seven and a half years, then I joined a new one in early 2022.
+  This article comes from a recent self-reflection on the things I wish I had started doing earlier in my career and the things I wish I had done differently.
+  What I am sharing here may be useful to any junior to mid-level developer who wishes to improve and progress toward the title of senior and beyond.",
+  image_url: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*r5coQ_IUZNe0yjOH7vq_6w.jpeg",
+  user_id: random_user.id,
+  url: "https://medium.com/better-programming/advices-from-a-software-engineer-with-8-years-of-experience-8df5111d4d55"
+)
+
+Post.create!(
+  title: "The 7 Signs of a Bad Programmer",
+  content: "There are many ways to be ineffective at a job. Here are a few that seem to be a running theme with some programmers I've worked with over the years:
+  I'm a Software Engineer, not a Programmer
+  You know what they're like. Mechanical keyboard in the office? Can't make the standup because they were thinking about that problem (it's 5 minutes to mention what you're thinking). How long did it take to get the latte?
+  I'm not entirely certain how people can become so arrogant with 3 years of experience, but there you go.",
+  image_url: "https://miro.medium.com/v2/resize:fit:1100/0*symRsb0c05pPC6BV",
+  user_id: random_user.id,
+  url: "https://medium.com/@tsecretdeveloper/the-7-signs-of-a-bad-programmer-a624204f7222"
+)
 
 posts = Post.all.to_a
 
 15.times do
   random_post = posts.sample
-  random_user = users.sample
+  random_user = (users - [random_post.user]).sample
   Comment.create!(
     content: "Super Cool!",
     post: random_post,

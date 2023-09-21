@@ -71,27 +71,17 @@
     width: 60px;
   }
 
-  .card-posttrip-infos .card-planner {
-    font-weight: bold;
-    color: $green;
-  }
-
-
-  .card-post-infos .card-tags {
-    display: inline-block;
-  }
-
   .card-post a {
     text-decoration: none;
-    color: $very-dark-green;
+    color: grey;
     transition: 0.3s;
 
-    hover {
-      color: $green;
+    &:hover {
+      color: black;
     }
 
   }
 
   .card-post p {
-    font-family: 'Roboto', sans-serif;
+    font-family: $body-font, sans-serif;
   }

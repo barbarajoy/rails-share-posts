@@ -6,11 +6,11 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:success] = "Comment added successfully."
+      redirect_to post_path(@post)
     else
       flash[:error] = "Error adding the comment."
+      render 'posts/show'
     end
-
-    redirect_to post_path(@post)
   end
 
   private
