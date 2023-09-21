@@ -3,12 +3,37 @@
   width: 80%;
 }
 
-.post-content a {
+.post a {
   color: grey;
-  font-weight: bold;
+  font-style: italic;
   text-decoration: none;
 
   &:hover {
     color: black;
   }
+}
+
+.comments ul {
+  list-style: none;
+  padding: 0;
+}
+
+.btn-comments {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  &:hover {
+    background-color: grey;
+    border: none;
+  }
+}
+
+#comment_content {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  color: grey;
 }

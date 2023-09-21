@@ -2,7 +2,7 @@
         <div class="card-post-grid">
           <% @posts.each do |post| %>
               <div class="card-post">
-                <%= image_tag post.url %>
+                <%= image_tag post.image_url %>
                 <div class="card-post-infos">
                   <div>
                     <h2><%= link_to post.title, post_path(post) %></h2>
