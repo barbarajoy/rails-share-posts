@@ -5,6 +5,8 @@ User.create!(email: "test@mail.com", password: "test123", nickname: "test")
 User.create!(email: "barbara@mail.com", password: "test123", nickname: "barbara")
 User.create!(email: "kurt@mail.com", password: "test123", nickname: "kurtcobain")
 User.create!(email: "roger@mail.com", password: "test123", nickname: "rogerwaters")
+User.create!(email: "janis@mail.com", password: "test123", nickname: "janisjoplin")
+User.create!(email: "jim@mail.com", password: "test123", nickname: "jimmorrison")
 
 users = User.all.to_a
 random_user = users.sample
