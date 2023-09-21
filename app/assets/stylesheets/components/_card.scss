@@ -29,14 +29,11 @@
 
   .card-post h2 {
     display: flex;
-    height: 85px;
+    height: 53px;
     align-items: center;
-    overflow: hidden;
-    min-width: 70px;
     font-size: 16px;
     font-weight: bold;
-    margin: 0px 12px 8px 0px;
-    padding: 5px;
+    margin: 0px 0px 8px 0px;
   }
 
   .card-post h3 {
@@ -45,15 +42,11 @@
 
   .card-post p {
     font-size: 12px;
-    opacity: .7;
     margin: 0;
   }
 
   .card-post-infos {
     height: 100px;
-    p {
-      overflow: hidden;
-    }
   }
 
   .card-post .card-post-infos {
@@ -75,6 +68,7 @@
     text-decoration: none;
     color: grey;
     transition: 0.3s;
+    font-family: 12px;
 
     &:hover {
       color: black;

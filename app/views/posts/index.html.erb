@@ -5,7 +5,8 @@
                 <%= image_tag post.image_url %>
                 <div class="card-post-infos">
                   <div>
-                    <h2><%= link_to post.title, post_path(post) %></h2>
+                    <h2><%= post.title %></h2>
+                    <p><%= link_to "See more <i class='fa-solid fa-plus' style='color: #77797e;'></i>".html_safe, post_path(post) %></p>
                   </div>
                   <div>
                     <p class="mx-auto"><%= post.user.nickname %></p>
